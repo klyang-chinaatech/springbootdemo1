@@ -1,0 +1,65 @@
+git init
+
+git config user.name 'klyang-chinaatech'
+git config user.email 'klyang@chinaatech.com'
+
+git add -A
+git add .
+
+git commit -m '提交描述信息'
+git commit -am '提交描述信息'
+
+git status
+
+git rm -r --cached .
+
+git log
+git tag -a v0.2 fre3r43f
+
+git log --oneline
+git log --oneline --graph
+
+git branch                列出当前开发所有分支(默认会有master)
+git branch kunlo          创建一个kunlo的分支(最新提交点)
+git branch kunlo 提交点   创建一个kunlo的分支(指定提交点)
+
+git branch -d kunlo       删除kunlo分支
+
+git checkout kunlo        切换至kunlo分支
+
+合并分支
+git checkout master       先切换至master
+git merge kunlo           合并分支kunlo和主干master,合并后的提交点属于主干master
+
+git show HEAD             
+
+git reset --hard 提交点   （--hard表示全恢复，提交点：可用ID或标签）
+
+git reflog                 查找所有操作的提交点
+
+合并分支
+git checkout master       先切换至master
+git rebase kunlo           合并分支kunlo和主干master,合并后的提交点属于主干master,该方式不显示（git log --oneline --graph）的分支线，不提倡
+
+
+与GitHub连接
+git remote add origin https://github.com/klyang-chinaatech/springbootdemo1.git
+git push -u origin master       推送本地修改至远程git文档库
+
+origin是名字可以修改
+
+git remote      查看远程连接
+git remote -v   查看远程连接详情
+
+
+使用如下命令：git pull --rebase origin master
+
+clone 克隆
+git clone https://github.com/klyang-chinaatech/springbootdemo1.git  springbootdemo1
+
+
+git fetch/pull origin master 
+fetch是将远程主机的最新内容拉到本地，不进行合并
+pull是将远程主机的最新内容拉下来后直接合并
+
+
