@@ -1,7 +1,7 @@
 git init
 
-git config user.name 'klyang-chinaatech'
-git config user.email 'klyang@chinaatech.com'
+git config user.name '--'
+git config user.email '--'
 
 git add -A
 git add .
